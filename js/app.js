@@ -7,32 +7,25 @@ for(let subject of subjects){
 var choices = [];
 var numb = 0;
 
-volgende();
+  display();
 
-function volgende() {
-  console.log(numb);
-  if (numb < subjects.length) {
-    if (typeof subjects[numb] != 'undefined') {
-      document.getElementById("title").innerHTML = (subjects[numb].title);
-      document.getElementById("statement").innerHTML = (subjects[numb].statement);
-      if (numb != subjects.length-1){
-        numb++;
-      }
-    }
+function toonstelling(){
+  document.getElementById("title").innerHTML = (subjects[numb].title);
+  document.getElementById("statement").innerHTML = (subjects[numb].statement);
+}
+
+function next() {
+
+  if (numb < subjects.length-1) {
+    numb++;
+    toonstelling();
   }
 }
 
-function terug() {
+function back() {
 
-  numb --;
-  console.log(numb);
-  if (numb <= -1) {
-
-    numb = 0;
-    //terug naar start misschien ?
+  if (numb > 0) {
+    numb--;
+    display();
   }
-  document.getElementById("title").innerHTML = (subjects[numb].title);
-  document.getElementById("statement").innerHTML = (subjects[numb].statement);
-
-
 }
