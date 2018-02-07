@@ -5,20 +5,23 @@ for(let subject of subjects){
 }
 
 var choices = [];
+choices[0] = "eens";
 var numb = 0;
 
   display();
 
-function toonstelling(){
+function display(){
   document.getElementById("title").innerHTML = (subjects[numb].title);
   document.getElementById("statement").innerHTML = (subjects[numb].statement);
+  console.log(numb);
+  console.log(choices);
 }
 
 function next() {
 
   if (numb < subjects.length-1) {
     numb++;
-    toonstelling();
+    display();
   }
 }
 
@@ -28,4 +31,16 @@ function back() {
     numb--;
     display();
   }
+}
+
+function agree(){
+
+}
+
+function disagree(){
+
+}
+
+function neither(){
+
 }
