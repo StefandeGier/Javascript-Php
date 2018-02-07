@@ -4,32 +4,33 @@ for(let subject of subjects){
 	//console.log(subject);
 }
 
+var choices = [];
 var numb = 0;
 
-document.getElementById("title").innerHTML = (subjects[numb].title);
-document.getElementById("statement").innerHTML = (subjects[numb].statement);
+volgende();
 
-
-function Volgende() {
-
-  numb += 1;
-
-  document.getElementById("title").innerHTML = (subjects[numb].title);
-  document.getElementById("statement").innerHTML = (subjects[numb].statement);
-
-
+function volgende() {
+  console.log(numb);
+  if (numb < subjects.length) {
+    if (typeof subjects[numb] != 'undefined') {
+      document.getElementById("title").innerHTML = (subjects[numb].title);
+      document.getElementById("statement").innerHTML = (subjects[numb].statement);
+      if (numb != subjects.length-1){
+        numb++;
+      }
+    }
+  }
 }
 
-function Terug() {
+function terug() {
 
-  numb -= 1;
+  numb --;
   console.log(numb);
   if (numb <= -1) {
 
     numb = 0;
     //terug naar start misschien ?
   }
-
   document.getElementById("title").innerHTML = (subjects[numb].title);
   document.getElementById("statement").innerHTML = (subjects[numb].statement);
 
