@@ -1,13 +1,40 @@
+body{
+  background-image: url("background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+ html {
+    height: 100%;
+}
+
+
+
 #header{
   text-align: center;
   color: blue;
 }
 
 #title{
-  text-align: center;
-  color:green;
+  text-align: left;
+  color:#01B4DC;
+  margin:20px;
+  margin-left: 50px;
+
 }
 
 #statement{
-  text-align: center;
+  text-align: left;
+  font-size: 35px;
+}
+
+#content{
+  margin-top: 5%;
+}
+
+.button{
+
 }
