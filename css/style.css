@@ -45,3 +45,11 @@ body{
 #selectparties{
   display: none;
 }
+
+.myField{
+  margin-left:40px;
+}
+
+.checkbox{
+  margin-left:20px;
+}
