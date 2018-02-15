@@ -8,52 +8,10 @@ for(let partie of parties){
 
 }
 
-// console.log(parties);
-
-
-/*let obj = parties.find(o => o.name === 'VVD');
-console.log(obj);*/
-
-// soo make a loop in a loop like explained here. We can make a perfect checker.
-/*console.log(subjects[0].parties[0]);
-if (subjects[0].parties[0].position == "pro" ) {
-  console.log("hi")// so i++ or somthing
-}*/
-
-
 var backadv = 0;
 var choicesweight = [];
-var choices = ["pro","pro","pro"];
+var choices = [];
 var numb = 0;
-var p = 0;
-
-for (var i = 0; i < subjects.length; i++) {
-  //console.log(subjects[i]);
-  for (var m = 0; m < subjects[i].parties.length; m++) {
-    console.log(m);
-    console.log(subjects[m].title);
-    //console.log(choices[m]);
-    //console.log(subjects[m].parties);
-    for (var c = 0; c < subjects[m].parties.length; c++) {
-      console.log(subjects[m].parties[c].name);
-      console.log(subjects[m].parties[c].position);
-      if (subjects[m].parties[c].position == choices[m]) {
-        console.log("dit is een punt naar de partij");
-
-        let obj = parties.find(o => o.name === subjects[m].parties[c].name);
-
-        obj.points += 1;
-        console.log(obj.points);
-        console.log(parties);
-      }
-
-    }
-  }
-
-}
-
-
-//console.log(subjects[1].parties);
 
 choicesWeight()
 
@@ -63,8 +21,41 @@ function displayParties(){
   document.getElementById("selectparties").style.display = "none";
   document.getElementById("title").innerHTML = "Kies partijen";
   document.getElementById("statement").innerHTML = "Kies de partijen die u in uw test wilt";
-  backadv = 1;
-  alert(backadv);
+
+  var divResults = document.getElementById("results");
+
+  for (var i = 0; i < subjects.length; i++) {
+      for (var c = 0; c < subjects[i].parties.length; c++) {
+        if (subjects[i].parties[c].position == choices[i]) {
+
+          //console.log(`naam die ik zoek: ${mijnPartij}`);
+          let obj = parties.find(o => o.name === subjects[i].parties[c].name);
+            obj.points += 1;
+            if (choicesweight[i] == "Extra punten") {
+              obj.points += 10;
+            }
+
+
+        }
+
+      }
+
+    }
+
+    parties.sort(function (a, b) {
+      return b.points - a.points;
+    });
+
+    for (var m = 0; m < parties.length; m++) {
+
+      var result = "";
+
+      document.getElementById("results").innerHTML += parties[m].name + "<br>" +parties[m].points+"<br>";
+
+    }
+
+    backadv = 1;
+    alert(backadv);
 }
 
 function displayStart(startb){

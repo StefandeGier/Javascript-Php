@@ -53,3 +53,8 @@ body{
 .checkbox{
   margin-left:20px;
 }
+
+.resulttext{
+  margin-right:30px;
+  color:red;
+}

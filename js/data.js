@@ -230,5 +230,9 @@ var parties = [
 	{name: "De Burger Beweging", points:0 ,secular: true, size: 0},
 	{name: "Piratenpartij", points:0 ,secular: true, size: 0},
 	{name: "Artikel 1", points:0 ,secular: true, size: 0},
-	{name: "Libertarische Partij",points:0 , secular: true, size: 0}
+	{name: "Libertarische Partij",points:0 , secular: true, size: 0},
+	{name: "Lokaal in de Kamer",points:0 , secular: true, size: 0},
+	{name: "Vrijzinnige Partij",points:0 , secular: true, size: 0},
+	{name: "50Plus",points:0 , secular: true, size: 0}
+
 ];
