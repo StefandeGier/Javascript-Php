@@ -42,10 +42,17 @@ body{
   display: none;
 }
 
+#parties{
+  display: none;
+}
+
 #selectparties{
   display: none;
 }
 
+#parties{
+  display: none;
+}
 .myField{
   margin-left:40px;
 }

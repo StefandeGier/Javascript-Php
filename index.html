@@ -33,20 +33,29 @@
             </div>
             <div id="questions" style="display:none;"class="card">
               <div  class="card-block">
-                <button onclick="back()" style="margin:5px;"class="btn btn-light rounded-circle"><i class="fa fa-arrow-left" style="font-size:30px; color:black; margin:5px;"></i></button>
+                <button onclick="back()" id="back" style="margin:5px;"class="btn btn-light rounded-circle"><i class="fa fa-arrow-left" style="font-size:30px; color:black; margin:5px;"></i></button>
                 <h3 class="card-title" id="title"></h3>
-                <div id="results">
+
 
                 </div>
                 <p class="card-text"style="margin:5%;" id="statement"></p>
-                <button type="button" id="nextweight" onclick="weightCalc()" class="btn btn-dark btn-lg">Ga verder</button>
+                <button type="button" id="nextweight" onclick="weightCalc()" class="btn btn-dark btn-lg">Naar de resultaten</button>
+                <div id="parties">
+                  <button type="button" onclick="testresult(this)" value="0" class="btn btn-dark btn-lg">alle</button>
+                  <button type="button" onclick="testresult(this)" value="1" class="btn btn-dark btn-lg">grote partijen</button>
+                  <button type="button" onclick="testresult(this)" value="2" class="btn btn-dark btn-lg">seculiere</button>
+                  <div id="results">
+                </div>
+
+                </div>
+
                 <div id="buttons" style="margin-bottom:5%; display:none;" class="col-md-12">
                   <button onclick="agree()" class="btn btn-dark btn-lg"><span style="margin:5px;">Eens</span></button>
                   <button onclick="neither()" class="btn btn-dark btn-lg">Geen van beide</button>
                   <button style="margin-right:10%;"onclick="disagree()" class="btn btn-dark btn-lg">Oneens</button>
                   <a href="#" style="font-size:20px; color:grey; text-decoration:none;" onclick="next()">Sla de vraag over <span><i class="fa fa-arrow-right"></i></span> </a>
                 </div>
-              </div>
+
 
             </div>
             <div id="selectparties" style="background-color:#E7EAEB;"class="card">
